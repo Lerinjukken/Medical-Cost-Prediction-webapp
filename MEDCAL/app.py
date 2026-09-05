@@ -17,7 +17,7 @@ encoder_city = pickle.load(open(os.path.join(BASE_DIR, "models", "city_.sav"), "
 encoder_gender = pickle.load(open(os.path.join(BASE_DIR, "models", "gender_.sav"), "rb"))
 encoder_insurance = pickle.load(open(os.path.join(BASE_DIR, "models", "insurancetype_.sav"), "rb"))
 encoder_smoker = pickle.load(open(os.path.join(BASE_DIR, "models", "smoker_.sav"), "rb"))
-data = pickle.load(open(os.path.join(BASE_DIR, "models", "XGBREGRESSOR_with_metrics.pkl"), "rb"))
+data = pickle.load(open(os.path.join(BASE_DIR, "models", "XGBREGERSSOR_with_metrics.pkl"), "rb"))
 model = data["model"]
 r2 = data["r2"]
 
