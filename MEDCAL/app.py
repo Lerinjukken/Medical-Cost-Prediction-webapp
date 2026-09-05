@@ -10,15 +10,17 @@ from PIL import Image
 from sklearn.metrics import accuracy_score
 
 # Load your trained model
-scaler = pickle.load(open('models/scalar2_.sav1', 'rb'))
+BASE_DIR = os.path.dirname(__file__)
+
+scaler = pickle.load(open(os.path.join(BASE_DIR, "models", "scalar2_sav1"), "rb"))
+encoder_city = pickle.load(open(os.path.join(BASE_DIR, "models", "city_sav"), "rb"))
+encoder_gender = pickle.load(open(os.path.join(BASE_DIR, "models", "gender_sav"), "rb"))
+encoder_insurance = pickle.load(open(os.path.join(BASE_DIR, "models", "insurancetype_sav"), "rb"))
+encoder_smoker = pickle.load(open(os.path.join(BASE_DIR, "models", "smoker_sav"), "rb"))
 data = pickle.load(open('models/XGBREGERSSOR_with_metrics.pkl', 'rb'))
 model = data["model"]
 r2 = data["r2"]
 
-encoder_city=pickle.load(open('models/city_.sav', 'rb'))
-encoder_gender=pickle.load(open('models/gender_.sav', 'rb'))
-encoder_insurance=pickle.load(open('models/insurancetype_.sav', 'rb'))
-encoder_smoker=pickle.load(open('models/smoker_.sav', 'rb'))
 
 st.set_page_config(
     page_title="MEDCAL | Medical Cost Prediction",
