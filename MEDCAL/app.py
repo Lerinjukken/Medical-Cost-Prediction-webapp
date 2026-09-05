@@ -29,7 +29,7 @@ st.set_page_config(
 )
 
 
-# ---------------- CUSTOM CSS ----------------
+
 st.markdown("""
 <style>
 body {
@@ -63,10 +63,9 @@ st.caption("Medical Cost Prediction")
 
 st.markdown("---")
 
-# ---------------- MAIN LAYOUT ----------------
+
 left, right = st.columns([1.2, 2])
 
-# ---------------- LEFT INFO PANEL ----------------
 with left:
     st.markdown("""
     <div class="card">
@@ -83,11 +82,13 @@ with left:
         </p>
     </div>
     """, unsafe_allow_html=True)
-    img = Image.open('assets/medical_insurance-removebg-preview.png')
+    img_path = os.path.join(BASE_DIR, "assets", "medical_insurance-removebg-preview.png")
+    img = Image.open(img_path)
     st.image(img, width=1000)
 
-img=Image.open('assets/medical_insurance-removebg-preview.png')
-# Input fields
+img_path = os.path.join(BASE_DIR, "assets", "medical_insurance-removebg-preview.png")
+img = Image.open(img_path)
+
 with right:
     st.header("🧑‍⚕️ Input Patient Details")
     col1, col2 = st.columns(2)
