@@ -12,7 +12,7 @@ from sklearn.metrics import accuracy_score
 # Load your trained model
 BASE_DIR = os.path.dirname(__file__)
 
-scaler = pickle.load(open(os.path.join(BASE_DIR, "models", "scalar2_sav1"), "rb"))
+scaler = pickle.load(open(os.path.join(BASE_DIR, "models", "scalar2_.sav1"), "rb"))
 encoder_city = pickle.load(open(os.path.join(BASE_DIR, "models", "city_sav"), "rb"))
 encoder_gender = pickle.load(open(os.path.join(BASE_DIR, "models", "gender_sav"), "rb"))
 encoder_insurance = pickle.load(open(os.path.join(BASE_DIR, "models", "insurancetype_sav"), "rb"))
